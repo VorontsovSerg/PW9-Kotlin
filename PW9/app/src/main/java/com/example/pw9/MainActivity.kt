@@ -39,12 +39,16 @@ fun Greeting(name: String, group: String) {
     ) {
         Text(
             text = name,
-            style = MaterialTheme.typography.h5
+            style = MaterialTheme.typography.h5.copy(
+                color = MaterialTheme.colors.onBackground
+            )
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = group,
-            style = MaterialTheme.typography.body1
+            style = MaterialTheme.typography.h5.copy(
+                color = MaterialTheme.colors.onSurface
+            )
         )
     }
 }
